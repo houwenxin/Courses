@@ -31,5 +31,3 @@ for i = 1:m
 	end
 end
 err_rate = err_num / m	
-
-
