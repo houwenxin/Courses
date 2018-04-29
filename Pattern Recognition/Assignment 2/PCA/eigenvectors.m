@@ -1,3 +1,4 @@
+% To make comparisons between eigenvectors before and after centralized.
 clear all;clc;
 % set the random number seed to 0 for reproducibility.
 %rand('seed', 0);
