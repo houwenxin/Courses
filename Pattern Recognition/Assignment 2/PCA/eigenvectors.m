@@ -1,6 +1,7 @@
 clear all;clc;
 % set the random number seed to 0 for reproducibility.
-rand('seed', 0);
+%rand('seed', 0);
+rng(0);
 avg = [1 2 3 4 5 6 7 8 9 10];
 scale = 0.1;
 
