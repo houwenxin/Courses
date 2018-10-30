@@ -1,0 +1,3 @@
+Command: hadoop jar Difference.jar Difference <input path> <output path> <relation name>
+
+Example: hadoop jar Difference.jar Difference input output R1.txt    
