@@ -1,0 +1,6 @@
+Command: hadoop jar Selection.jar Selection <input path> <output path> <id> <value>
+
+If id == 2 then value should be 's'(smaller) / 'e'(equal) / 'l' (larger) + value'
+
+Example: hadoop jar Selection.jar Selection input output 2 e18
+         hadoop jar Selection.jar Selection input output 2 l18
