@@ -1,0 +1,4 @@
+Command: hadoop jar Union.jar Union <input path> <output path>
+
+Example: hadoop jar Union.jar Union input output 
+
