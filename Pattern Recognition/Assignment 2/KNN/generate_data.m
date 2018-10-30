@@ -1,3 +1,3 @@
-x = rand(10,20000); %#features * number
+x = rand(10,500); %#features * number
 csvwrite('dataset.txt', x)
 
