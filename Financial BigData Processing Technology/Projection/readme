@@ -1,0 +1,3 @@
+Command: hadoop jar Projection.jar Projection <input path\> <output path\> <col id>
+
+Example: hadoop jar Projection.jar Projection input output 1
