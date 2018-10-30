@@ -1,0 +1,3 @@
+Command: hadoop jar MatrixMultiply.jar MatrixMultiply <Matrix M input path> <Matrix N input path> <output path>
+
+Example: hadoop jar MatrixMultiply.jar MatrixMultipily inputM/M_10_15 inputN/N_15_20 output
