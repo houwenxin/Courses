@@ -1,0 +1,3 @@
+Command: hadoop jar WordCount.jar WordCount <input path> <output path>
+
+Example: hadoop jar WordCount.jar WordCount input output
