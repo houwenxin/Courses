@@ -1,4 +1,4 @@
-#Command: hadoop jar NaturalJoin.jar NaturalJoin <input_path> <output_path> <joincol id> <relationNameA>
-<br>
+Command: hadoop jar NaturalJoin.jar NaturalJoin <input_path> <output_path> <joincol id> <relationNameA>
+
 Example: 
 hadoop jar NaturalJoin.jar NaturalJoin input output 0 Ra.txt
