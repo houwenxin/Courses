@@ -1,0 +1,3 @@
+Command: hadoop jar KMeans.jar KMeansDriver <k> <iteration num> <input path> <output path>
+
+Example: hadoop jar KMeans.jar KMeansDriver 2 5 input output_2_5
