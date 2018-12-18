@@ -1,7 +1,7 @@
 # Courses
-CS related courses' assignments in NJU.
-###1. Data Structure and Algorithms
-Assignment:
+CS related courses' assignments in NJU.  
+###1. Data Structure and Algorithms  
+Assignment:  
 1. LinkList
 2. Stack
 3. Circular Queue
@@ -12,6 +12,7 @@ Assignment:
 8. Binary Search and Hash Table
 9. Bubble Sort and Quick Sort
 10. MNIST Recognition by Softmax Regression (Project 2)
-###2. C++ and oriented programming
-###3. Pattern Recognition
-###4. Financial Big Data Processing Technology
+  
+###2. C++ and oriented programming  
+###3. Pattern Recognition  
+###4. Financial Big Data Processing Technology  
