@@ -2,8 +2,8 @@
 
 Hadoop的Java使用System.currentTimeMillis()函数记录时间，Spark使用了Python的time.clock()函数记录时间。
 
-结果发现，Hadoop使用了20512ms=20.512秒到时间运行程序，而Spark只花了0.106秒。
+结果发现，Hadoop使用了20512ms=20.512秒的时间运行程序，而Spark只花了0.106秒。
 
 记录时间的函数可能会造成一定的误差。并且Hadoop使用的是书上写的代码，而Spark使用的是官方提供的库，所以可能Spark的算法上也有一定的优化。
 
-不过还是可以看出Spark和Hadoop在运行时间上到巨大差距。
+不过还是可以看出Spark和Hadoop在运行时间上的巨大差距。
