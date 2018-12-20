@@ -15,7 +15,7 @@ index, label, feature1:weight1, feature5:weight5, featurek:weightk, ...
 Input Format (test data):  
 index, feature1:weight1, feature2:weight2, featurek:weightk, ...  
   
-*Both Train Data and Test Data are TF-IDF features.(Sparse Matrix)  
+* Both Train Data and Test Data are TF-IDF features.(Sparse Matrix)  
 
 ### Output File Format Example:
   
