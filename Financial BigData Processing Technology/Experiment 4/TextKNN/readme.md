@@ -4,7 +4,7 @@
 TextKNN <input path> <output path> <feature dimension> <k>  
   
 Example:  
-hadoop jar HWX_TextKNN.jar KNNMain testdata prediction_KNN 1000 10  
+hadoop jar HWX\_TextKNN.jar KNNMain testdata prediction\_KNN 1000 10  
   
   
 ### Input File Format Example:  
@@ -19,4 +19,4 @@ index, feature1:weight1, feature2:weight2, featurek:weightk, ...
 
 ### Output File Format Example:
 
-indexOfTestData		predictedLabel
+indexOfTestData \t predictedLabel
