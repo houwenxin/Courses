@@ -1,0 +1,19 @@
+### MapReduce Sentiment Classification  
+
+##### TFIDFNaiveBayes:  
+  
+Step 1: Run Preprocess.py (Set model\_type="count\_model").  
+  
+Step 2: Put info.txt, traindata.txt, testdata.txt into HDFS.  
+  
+Step 3: Run NaiveBayesMain train mode to get model.  
+  
+Step 4: Run NaiveBayesMain test mode to get prediction.  
+  
+##### TextKNN:  
+  
+Step 1: Run Preprocess.py (Set model\_type="tfidf\_model", featureNum=featureNum).  
+  
+Step 2: Put traindata.txt, textdata.txt into HDFS.  
+  
+Step 3: Run KNNMain \<input path\> \<output path\> \<featureNum\> \<k\> (Set featureNum=featureNum).  
