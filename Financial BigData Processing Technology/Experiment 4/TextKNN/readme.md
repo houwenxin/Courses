@@ -1,7 +1,7 @@
 ## TextKNN on MapReduce for Sentiment Classification  
 
 ### Usage:   
-TextKNN <input path> <output path> <feature dimension> <k>  
+TextKNN \<input path\> \<output path\> \<feature dimension\> \<k\>  
   
 Example:  
 hadoop jar HWX\_TextKNN.jar KNNMain testdata prediction\_KNN 1000 10  
@@ -19,4 +19,4 @@ index, feature1:weight1, feature2:weight2, featurek:weightk, ...
 
 ### Output File Format Example:
 
-indexOfTestData \t predictedLabel
+indexOfTestData           predictedLabel
