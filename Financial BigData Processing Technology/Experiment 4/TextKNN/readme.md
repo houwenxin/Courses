@@ -1,7 +1,7 @@
-## TextKNN on MapReduce for Sentiment Classification  
+## MapReduce TextKNN for Sentiment Classification  
 
 ### Usage:   
-TextKNN \<input path\> \<output path\> \<feature dimension\> \<k\>  
+hadoop jar TextKNN.jar KNNMain \<input path\> \<output path\> \<feature dimension\> \<k\>  
   
 Example:  
 hadoop jar HWX\_TextKNN.jar KNNMain testdata prediction\_KNN 1000 10  
