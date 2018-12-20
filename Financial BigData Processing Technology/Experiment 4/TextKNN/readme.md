@@ -18,5 +18,5 @@ index, feature1:weight1, feature2:weight2, featurek:weightk, ...
 *Both Train Data and Test Data are TF-IDF features.(Sparse Matrix)  
 
 ### Output File Format Example:
-
-indexOfTestData           predictedLabel
+  
+indexOfTestData [tab] predictedLabel
