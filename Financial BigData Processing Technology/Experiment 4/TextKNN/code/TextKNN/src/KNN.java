@@ -36,11 +36,22 @@ public class KNN {
 			HashMap<String, Double> dataDict = new HashMap<String, Double>();
 			String[] line = value.toString().split(", ");
 			String index = line[0];
-			for(int i = 1; i < line.length; i++) {
-				featurePair = line[i].split(":");
-				feature = featurePair[0];
-				weight = Double.parseDouble(featurePair[1]);
-				dataDict.put(feature, weight);
+			String mode = conf.get("mode");
+			if(mode.equals("test")) {
+				for(int i = 1; i < line.length; i++) {
+					featurePair = line[i].split(":");
+					feature = featurePair[0];
+					weight = Double.parseDouble(featurePair[1]);
+					dataDict.put(feature, weight);
+				}
+			}
+			else if(mode.equals("validate")) {
+				for(int i = 2; i < line.length; i++) {
+					featurePair = line[i].split(":");
+					feature = featurePair[0];
+					weight = Double.parseDouble(featurePair[1]);
+					dataDict.put(feature, weight);
+				}
 			}
 			for(int i = 0; i < trainData.featureNum; i++) {
 				Double tempWeight = dataDict.get(String.valueOf(i));
@@ -68,7 +79,7 @@ public class KNN {
 				distances.add(Double.MAX_VALUE);
 			}
 			for(int i = 0; i < trainData.size; i++) {
-				distance = getDistance(trainDataWeights.get(i), testDataWeights, trainData.featureNum);
+				distance = getDistance(trainDataWeights.get(i), testDataWeights, trainData.featureNum, "cosine");
 				for(int j = 0; j < k; j++) {
 					if(distance < distances.get(j)) {
 						distances.set(j, distance);
@@ -79,12 +90,27 @@ public class KNN {
 			}
 			return KNN;
 		}
-		private double getDistance(ArrayList<Double> vector1, ArrayList<Double> vector2, int dimension) {
+		private double getDistance(ArrayList<Double> vector1, ArrayList<Double> vector2, int dimension, String type) {
 			double distance = 0.0;
-			for(int i = 0; i < dimension; i++) {
-				distance = distance + Math.pow((vector1.get(i) - vector2.get(i)), 2);
+			double numerator = 0.0;
+			double denominator1 = 0.0;
+			double denominator2 = 0.0;
+			if(type.equals("Euclidean")) {
+				for(int i = 0; i < dimension; i++) {
+					distance = distance + Math.pow((vector1.get(i) - vector2.get(i)), 2);
+				}
+				distance = Math.sqrt(distance);
 			}
-			distance = Math.sqrt(distance);
+			else if(type.equals("cosine")) {
+				for(int i = 0; i < dimension; i++) {
+					numerator = numerator + vector1.get(i) * vector2.get(i);
+					denominator1 = denominator1 + Math.pow(vector1.get(i), 2);
+					denominator2 = denominator2 + Math.pow(vector2.get(i), 2);
+				}
+				denominator1 = Math.sqrt(denominator1);
+				denominator2 = Math.sqrt(denominator2);
+				distance = numerator / (denominator1 * denominator2);
+			}
 			return distance;
 		}
 	}

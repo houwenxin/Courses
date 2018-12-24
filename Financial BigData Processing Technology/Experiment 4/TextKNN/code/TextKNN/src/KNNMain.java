@@ -14,12 +14,13 @@ public class KNNMain {
 		// TODO Auto-generated method stub
 		Configuration conf = new Configuration();
 		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-		if(otherArgs.length != 4) {
-			System.out.println("Usage: TextKNN <in> <out> <featureNum> <k>");
+		if(otherArgs.length != 5) {
+			System.out.println("Usage: KNNMain <in> <out> <featureNum> <k> <test / validate>");
 			System.exit(2);
 		}
 		conf.set("featureNum", otherArgs[2]);
 		conf.set("k", otherArgs[3]);
+		conf.set("mode", otherArgs[4]);
 		Job job = new Job(conf, "TextKNN");
 		job.setJarByClass(KNN.class);
 		job.setMapperClass(KNN.KNNMapper.class);
