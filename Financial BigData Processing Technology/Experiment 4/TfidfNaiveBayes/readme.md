@@ -2,7 +2,7 @@
   
 ### Usage:  
   
-hadoop jar NaiveBayes.jar NaiveBayesMain \<input path\> \<output path\> \<mode (train / test)\>  
+hadoop jar NaiveBayes.jar NaiveBayesMain \<input path\> \<output path\> \<mode (train / test / validate)\>  
   
 Example:  
   
@@ -29,5 +29,5 @@ Model File:
 TrainLabel#Feature:Weight  
     
 Prediction File:  
-indexOfTestData [tab] predictedLabel
+\<Index of test or train data\> [tab] predictedLabel
 
