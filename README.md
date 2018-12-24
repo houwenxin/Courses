@@ -12,6 +12,6 @@ Assignment:
 8. Binary Search and Hash Table
 9. Bubble Sort and Quick Sort
 10. MNIST Recognition by Softmax Regression (Project 2)
-### 2. C++ and oriented programming  
+### 2. C++ and Object-Oriented Programming  
 ### 3. Pattern Recognition  
 ### 4. Financial Big Data Processing Technology  
