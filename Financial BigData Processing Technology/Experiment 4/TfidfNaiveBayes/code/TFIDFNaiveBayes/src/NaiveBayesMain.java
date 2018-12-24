@@ -16,7 +16,7 @@ public class NaiveBayesMain {
 	    String[] otherArgs =
 	        new GenericOptionsParser(conf, args).getRemainingArgs();
 	    if (otherArgs.length != 3) {
-	      System.err.println("Usage: NaiveBayesTrain <in> <out> <train / test>");
+	      System.err.println("Usage: NaiveBayesMain <in> <out> <train / test / validate>");
 	      System.exit(2);
 	    }
 	    if(otherArgs[2].equals("train")) {
@@ -32,10 +32,15 @@ public class NaiveBayesMain {
 	    	FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
 	    	System.exit(job.waitForCompletion(true) ? 0 : 1);
 	    }
-	    else if(otherArgs[2].equals("test")) {
+	    else if(otherArgs[2].equals("test") || otherArgs[2].equals("validate")) {
 	    	Job job = new Job(conf, "NaiveBayesTest");
 	    	job.setJarByClass(NaiveBayesTest.class);
-	    	job.setMapperClass(NaiveBayesTest.TestMapper.class);
+	    	if(otherArgs[2].equals("test")){
+	    		job.setMapperClass(NaiveBayesTest.TestMapper.class);
+	    	}
+	    	else if(otherArgs[2].equals("validate")){
+	    		job.setMapperClass(NaiveBayesTest.ValidMapper.class);
+	    	}
 	    	job.setMapOutputKeyClass(Text.class);
 	    	job.setMapOutputValueClass(Text.class);
 	    	FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
