@@ -46,4 +46,4 @@ if __name__ == "__main__":
     train_file = args.trainpath
     valid_file = args.validpath
     accuracy = evaluate(train_file, valid_file)
-    print(accuracy)
+    print("Accuracy: ", accuracy)
