@@ -1,9 +1,7 @@
-为了控制变量，保证测试的相对公平，Spark和Hadoop都采用了5个中心点，迭代3次的设置。
+为了控制变量，保证测试的相对公平，Spark（使用MLlib库）和Spark（手写KMeans）和Hadoop都采用了5个中心点，迭代3次的设置。
 
 Hadoop的Java使用System.currentTimeMillis()函数记录时间，Spark使用了Python的time.clock()函数记录时间。
 
-结果发现，Hadoop使用了20512ms=20.512秒的时间运行程序，而Spark只花了0.106秒。
+结果发现，Hadoop使用了20512ms=20.512秒的时间运行程序，使用Spark的MLlib库花了0.088秒，手写KMeans算法的Spark花了0.075秒的时间。可能是由于迭代次数还不够多，数据量还不够大的原因，Spark上手写的KMeans算法比使用MLlib库还要快一些，不过基本上二者是差不多的。
 
-记录时间的函数可能会造成一定的误差。并且Hadoop使用的是书上写的代码，而Spark使用的是官方提供的库，所以可能Spark的算法上也有一定的优化。
-
-不过还是可以看出Spark和Hadoop在运行时间上的巨大差距。
+而Hadoop和Spark之间比较时，记录时间的函数可能会造成一定的误差。不过不管是使用MLlib库或者是手写KMeans算法的Spark相对于Hadoop在运行时间都具有巨大的优势。
