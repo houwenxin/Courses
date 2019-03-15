@@ -15,3 +15,4 @@ Assignment:
 ### 2. C++ and Object-Oriented Programming  
 ### 3. Pattern Recognition  
 ### 4. Financial Big Data Processing Technology  
+### 5. Introduction to Data Science
